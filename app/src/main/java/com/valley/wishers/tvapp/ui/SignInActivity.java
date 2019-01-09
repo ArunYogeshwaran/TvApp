@@ -1,5 +1,6 @@
 package com.valley.wishers.tvapp.ui;
 
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
@@ -14,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.FrameLayout;
 
 import com.valley.wishers.tvapp.R;
+import com.valley.wishers.tvapp.viewmodel.SignInViewModel;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -26,7 +28,8 @@ public class SignInActivity extends AppCompatActivity implements SignInFragmentI
     private int mMode;
     @BindView(R.id.sign_in_activiy_container)
     protected FrameLayout signInActivityContainer;
-    FragmentManager fragmentManager;
+    private FragmentManager fragmentManager;
+    private SignInViewModel signInViewModel;
 
     // Constants
     public static final int REGISTER = 0;
@@ -47,6 +50,7 @@ public class SignInActivity extends AppCompatActivity implements SignInFragmentI
         setContentView(R.layout.activity_sign_in);
         ButterKnife.bind(this);
         this.fragmentManager = getSupportFragmentManager();
+        this.signInViewModel = ViewModelProviders.of(this).get(SignInViewModel.class);
     }
 
     @Override

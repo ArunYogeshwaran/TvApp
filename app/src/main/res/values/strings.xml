@@ -12,6 +12,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wv_tv_title">WV TV</string>
     <string name="log_in">LOG IN</string>
     <string name="registration">REGISTRATION</string>
     <string name="remember_me">Remember me</string>
@@ -26,4 +27,7 @@
     <string name="new_password">New Password</string>
     <string name="confirm_password">Confirm Password</string>
     <string name="save">SAVE</string>
+    <string name="channels">Channels</string>
+    <string name="short_films">Short Films</string>
+    <string name="shows">Shows</string>
 </resources>
